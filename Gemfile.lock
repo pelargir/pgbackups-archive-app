@@ -27,6 +27,7 @@ GEM
     launchy (2.3.0)
       addressable (~> 2.3)
     mime-types (1.23)
+    multi_json (1.8.4)
     net-scp (1.1.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.6.7)
@@ -48,6 +49,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  multi_json (~> 1.8.4)
   newrelic_rpm (~> 3.6.3.104)
   pgbackups-archive (~> 0.2.0)
   rake (~> 10.0.4)
