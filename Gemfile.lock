@@ -72,6 +72,3 @@ DEPENDENCIES
   newrelic_rpm
   pgbackups-archive
   rake
-
-BUNDLED WITH
-   1.10.2
