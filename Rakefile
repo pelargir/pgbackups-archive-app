@@ -6,7 +6,7 @@ class RunPgbackupsArchive
   include NewRelic::Agent::Instrumentation::ControllerInstrumentation
 
   def call
-    Heroku::Client::PgbackupsArchive.perform
+    PgbackupsArchive::Job.call
   end
 
   add_transaction_tracer :call, category: :task
@@ -16,7 +16,7 @@ namespace :pgbackups do
 
   desc "Capture a Heroku PGBackups backup and archive it to Amazon S3."
   task :archive do
-    PgbackupsArchive::Job.call
+    RunPgbackupsArchive.new.call
   end
 
 end
