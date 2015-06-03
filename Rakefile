@@ -14,9 +14,9 @@ end
 
 namespace :pgbackups do
 
-  desc "Perform a pgbackups backup then archive to S3."
+  desc "Capture a Heroku PGBackups backup and archive it to Amazon S3."
   task :archive do
-    RunPgbackupsArchive.new.call
+    PgbackupsArchive::Job.call
   end
 
 end
